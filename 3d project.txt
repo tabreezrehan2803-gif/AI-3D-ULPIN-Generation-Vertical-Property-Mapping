@@ -1,0 +1,1151 @@
+Build a complete, polished, interactive full-stack hackathon project named:
+
+# AI-3D ULPIN Generation & Vertical Property Mapping System
+
+## 1. PROJECT OBJECTIVE
+
+Create a modern web application that demonstrates an AI-powered 3D cadastral/property mapping system.
+
+The system solves the limitations of traditional 2D land records, which cannot properly represent:
+
+* Multi-storey buildings
+* Individual floors
+* Apartment units
+* Basements
+* Underground parking
+* Empty land parcels
+* Vertical property boundaries
+* Building footprints
+* Underground infrastructure
+
+The application should demonstrate how images, architectural plans, GIS-style property data, and AI analysis can be transformed into an interactive 3D property representation.
+
+The complete demonstration pipeline should be:
+
+IMAGE / PROPERTY DATA
+↓
+AI ANALYSIS
+↓
+BUILDING & LAND DETECTION
+↓
+3D MODEL GENERATION
+↓
+VERTICAL PROPERTY MAPPING
+↓
+PROTOTYPE 3D ULPIN GENERATION
+↓
+BOUNDARY VALIDATION
+↓
+3D PROPERTY VISUALIZATION
+↓
+PROPERTY REPORT
+
+IMPORTANT:
+This is a hackathon prototype. Do NOT claim that the generated ULPIN is an official government ULPIN. Clearly label it everywhere as:
+
+"Prototype 3D ULPIN — Hackathon Demonstration"
+
+The goal is to demonstrate the concept and workflow.
+
+---
+
+# 2. TECHNOLOGY STACK
+
+Use:
+
+Frontend:
+
+* React
+* TypeScript
+* Vite
+* Tailwind CSS
+* Three.js
+* React Three Fiber
+* @react-three/drei
+* Lucide React
+* Recharts
+
+Backend:
+
+* Node.js / Express OR Python FastAPI
+* Use whichever integrates most reliably with Replit
+
+Data:
+
+* JSON/local database for demo data
+* Structure the code so PostgreSQL/PostGIS can be integrated later
+
+AI/ML:
+
+* Python/OpenCV if practical
+* Create an abstraction for an AI detection service
+* If a real ML model cannot run reliably in Replit, create a realistic prototype AI-processing pipeline with clearly labeled simulated results
+* Do not pretend simulated results are real AI measurements
+
+Reports:
+
+* Generate a professional downloadable/printable property report
+* Use a backend PDF library if practical
+* Otherwise provide a polished browser-printable report
+
+---
+
+# 3. DESIGN REQUIREMENTS
+
+The website must look like a professional:
+
+* Government technology platform
+* Smart city platform
+* GIS platform
+* Digital twin platform
+* 3D cadastral management system
+
+Do NOT make it look like a gaming website.
+
+Use a modern dark GIS dashboard style with:
+
+* Dark navy/charcoal background
+* Glass-style cards
+* Subtle borders
+* Professional typography
+* Blue/cyan accent colors
+* Clear icons
+* Smooth animations
+* Good spacing
+* High-quality dashboard layout
+
+The 3D viewer must be the visual centerpiece.
+
+Make the interface suitable for displaying to hackathon judges on a large screen.
+
+Desktop-first design, but keep it responsive.
+
+---
+
+# 4. APPLICATION STRUCTURE
+
+Create these pages:
+
+1. Landing Page
+2. Dashboard
+3. Image → 3D
+4. 3D Property Builder
+5. 3D ULPIN Generator
+6. Vertical Property Viewer
+7. Boundary Validation
+8. Property Explorer
+9. Property Report
+
+Use React Router.
+
+Create a reusable navigation sidebar.
+
+---
+
+# 5. LANDING PAGE
+
+Create an impressive landing page.
+
+Hero heading:
+
+"AI-3D ULPIN Generation & Vertical Property Mapping"
+
+Subtitle:
+
+"Transforming traditional 2D property records into intelligent 3D cadastral information."
+
+Show a short explanation of the problem:
+
+Traditional 2D land records struggle to represent vertical and underground property structures. Modern urban environments contain multi-storey buildings, apartments, basements, parking areas and underground infrastructure.
+
+Show the proposed solution:
+
+"An AI-powered 3D cadastral platform for visualizing, identifying, validating and reporting modern property structures."
+
+Create a visual workflow:
+
+Drone / Image / Building Plan
+↓
+AI Analysis
+↓
+3D Reconstruction
+↓
+Vertical Mapping
+↓
+3D ULPIN
+↓
+Boundary Validation
+↓
+Property Report
+
+Buttons:
+
+"Launch 3D Dashboard"
+
+"Try Interactive Demo"
+
+Technology tags:
+
+AI
+GIS
+LiDAR
+Drone Imagery
+GNSS/CORS
+DEM/DSM
+3D Cadastral Mapping
+
+---
+
+# 6. MAIN DASHBOARD
+
+Create a professional GIS dashboard.
+
+Sidebar navigation:
+
+Dashboard
+Image → 3D
+Property Builder
+3D ULPIN
+Vertical Mapping
+Boundary Validation
+Property Explorer
+Reports
+
+Top statistics:
+
+Total Properties
+3D Properties
+Prototype ULPINs
+Vertical Properties
+Boundary Issues
+
+Example values:
+
+1,248 Total Properties
+856 3D Properties
+1,102 Prototype ULPINs
+147 Vertical Properties
+23 Boundary Issues
+
+Add an interactive 3D city/property map in the center.
+
+Create several 3D buildings using Three.js.
+
+The buildings must be actual 3D geometry, NOT images.
+
+Users must be able to:
+
+* Rotate
+* Zoom
+* Pan
+* Select buildings
+* View floors
+* Toggle layers
+
+Clicking a building should open its property details.
+
+---
+
+# 7. IMAGE → 3D FEATURE
+
+Create a dedicated page called:
+
+"AI Image → 3D Reconstruction"
+
+Create a beautiful upload interface.
+
+Allow:
+
+JPG
+PNG
+Drone Images
+Building Images
+Architectural Drawings
+
+After uploading an image, show an animated processing sequence:
+
+Step 1:
+"Uploading image..."
+
+Step 2:
+"AI analyzing image..."
+
+Step 3:
+"Detecting building footprint..."
+
+Step 4:
+"Estimating number of floors..."
+
+Step 5:
+"Extracting architectural features..."
+
+Step 6:
+"Generating 3D geometry..."
+
+Step 7:
+"Creating vertical property structure..."
+
+Then show AI results:
+
+Building detected: YES
+Confidence: 94%
+Estimated floors: 3
+Estimated height: 10.8 m
+Estimated footprint: 1,620 sq.ft
+Property type: Residential
+
+IMPORTANT:
+
+If a real image-to-3D ML model is not available, implement a clearly labeled:
+
+"Prototype AI Reconstruction"
+
+Use the uploaded image as the source and allow the user to adjust detected parameters.
+
+Then generate an actual interactive 3D model using Three.js.
+
+---
+
+# 8. 3D PROPERTY BUILDER
+
+Create an interactive property configuration panel.
+
+Property types:
+
+* Empty Land
+* Residential Building
+* Apartment
+* Commercial Building
+* Industrial Building
+
+Inputs:
+
+Land Width
+Land Length
+Number of Floors
+Floor Height
+Building Width
+Building Length
+Basement
+Parking
+Number of Units
+
+When values change, dynamically update the Three.js model.
+
+Generate:
+
+* Land parcel
+* Property boundary
+* Building footprint
+* Floors
+* Roof
+* Basement
+* Parking area
+* Apartment units
+
+Example:
+
+Land Width: 40 m
+Land Length: 30 m
+Floors: 3
+Floor Height: 3 m
+Basement: Yes
+Parking: Yes
+
+The 3D model should update automatically.
+
+---
+
+# 9. 3D BUILDING VISUALIZATION
+
+Create a highly interactive 3D viewer.
+
+Use React Three Fiber and Three.js.
+
+Features:
+
+* OrbitControls
+* Zoom
+* Pan
+* Rotate
+* Grid
+* Axis helper
+* Lighting
+* Shadows
+* Camera controls
+* Object selection
+
+Create controls:
+
+[Show Land]
+[Show Building]
+[Show Floors]
+[Show Boundaries]
+[Show Basement]
+[Show Parking]
+[Exploded View]
+[Cutaway View]
+
+Create a floor selector:
+
+Basement
+Ground Floor
+Floor 1
+Floor 2
+Floor 3
+Roof
+
+When selecting a floor:
+
+* Highlight it
+* Display floor information
+* Display its prototype ULPIN
+* Display area
+* Display elevation
+* Display unit information
+
+---
+
+# 10. EXPLODED VIEW
+
+This is an important visual feature.
+
+Create an "Exploded View" mode.
+
+When activated:
+
+Separate each floor vertically.
+
+Example:
+
+```
+         ROOF
+          ↑
+     FLOOR 3
+          ↑
+     FLOOR 2
+          ↑
+     FLOOR 1
+          ↑
+    GROUND FLOOR
+          ↑
+      BASEMENT
+```
+
+Make the animation smooth.
+
+Display labels next to each floor.
+
+This should clearly demonstrate vertical property mapping.
+
+---
+
+# 11. CUTAWAY / UNDERGROUND VIEW
+
+Create a "Cutaway View".
+
+When enabled:
+
+Make the ground transparent or hide part of the land.
+
+Show:
+
+Building
+Ground
+Basement
+Parking
+
+Example:
+
+GROUND
+────────────────────
+
+BUILDING
+┌──────────────┐
+│   FLOOR 3    │
+├──────────────┤
+│   FLOOR 2    │
+├──────────────┤
+│   FLOOR 1    │
+├──────────────┤
+│   BASEMENT   │
+├──────────────┤
+│   PARKING    │
+└──────────────┘
+
+This feature is important because the project specifically addresses underground and vertical property mapping.
+
+---
+
+# 12. PROTOTYPE 3D ULPIN GENERATOR
+
+Create a dedicated page.
+
+When a property is selected, generate a unique prototype identifier.
+
+Example:
+
+IN-TN-CHN-7A92-03-F02-U014
+
+Display:
+
+"Prototype 3D ULPIN"
+
+Break the identifier into:
+
+State
+District
+Property ID
+Building ID
+Floor
+Unit
+
+Example:
+
+State: TN
+District: CHN
+Property: 7A92
+Building: 03
+Floor: F02
+Unit: U014
+
+Allow the user to generate a new prototype ULPIN.
+
+Add:
+
+"Copy ULPIN"
+
+"View in 3D"
+
+"Generate Report"
+
+Every floor/unit should be able to have its own prototype identifier.
+
+---
+
+# 13. VERTICAL PROPERTY MAPPING
+
+Create a dedicated page.
+
+Display the building in the center.
+
+Right panel:
+
+Property Details
+
+Prototype 3D ULPIN
+Property Type
+Land Area
+Building Footprint
+Number of Floors
+Building Height
+Floor Area
+Elevation
+Basement
+Parking
+
+Create a vertical hierarchy:
+
+Property
+├── Land Parcel
+├── Building
+│    ├── Ground Floor
+│    ├── Floor 1
+│    ├── Floor 2
+│    └── Floor 3
+└── Underground
+├── Basement
+└── Parking
+
+Clicking any element should highlight the corresponding 3D geometry.
+
+---
+
+# 14. BOUNDARY VALIDATION
+
+Create a boundary analysis page.
+
+Show:
+
+Land boundary
+Building footprint
+Vertical building geometry
+
+Perform prototype validation checks:
+
+✓ Land parcel detected
+✓ Building footprint inside parcel
+✓ Building does not exceed property boundary
+✓ Floor geometry vertically aligned
+✓ Basement contained within property parcel
+✓ No major overlap detected
+
+Display:
+
+"Boundary Validation Score: 96%"
+
+Also create a demo conflict state.
+
+Example:
+
+"Potential Boundary Overlap Detected"
+
+Highlight the affected area in the 3D model.
+
+Use a warning panel explaining:
+
+"The prototype system detected a possible overlap between the building footprint and the neighboring property boundary."
+
+Clearly label these as prototype/demo validation results.
+
+---
+
+# 15. PROPERTY EXPLORER
+
+Create a searchable property table.
+
+Columns:
+
+Prototype 3D ULPIN
+Property Type
+Location
+Land Area
+Floors
+Built-up Area
+Status
+
+Example records:
+
+IN-TN-CHN-7A92-03
+Residential
+Chennai
+2400 sq.ft
+3
+4850 sq.ft
+Validated
+
+IN-TN-CHN-8B31-02
+Commercial
+Chennai
+5000 sq.ft
+5
+15000 sq.ft
+Validated
+
+IN-TN-CHN-4C21-09
+Empty Land
+Chennai
+3200 sq.ft
+0
+0
+Pending
+
+Clicking a property opens its 3D visualization.
+
+---
+
+# 16. PROPERTY REPORT
+
+Create a professional report page.
+
+Title:
+
+"AI-3D PROPERTY ASSESSMENT REPORT"
+
+Include:
+
+Property image
+
+3D model preview if practical
+
+Prototype 3D ULPIN
+
+Property Type
+
+Location
+
+Land Area
+
+Building Footprint
+
+Number of Floors
+
+Building Height
+
+Total Built-up Area
+
+Basement
+
+Parking
+
+Vertical Mapping Status
+
+Boundary Validation Status
+
+AI Analysis
+
+Detected Structures
+
+Floor Details
+
+Unit Details
+
+Boundary Assessment
+
+System Metadata
+
+Include a professional summary:
+
+"The prototype system processed the available property data and generated a structured 3D representation containing the land parcel, building geometry and vertical property components."
+
+Add buttons:
+
+"Generate PDF"
+
+"Print Report"
+
+"Download Report"
+
+The report should look like an official technical assessment document while clearly identifying itself as a hackathon prototype.
+
+---
+
+# 17. AI ANALYSIS PANEL
+
+Create reusable AI analysis cards.
+
+Example:
+
+AI PROPERTY ANALYSIS
+
+Building Detection
+94%
+
+Floor Detection
+91%
+
+Boundary Detection
+96%
+
+3D Reconstruction
+89%
+
+Overall Confidence
+92%
+
+Use progress indicators.
+
+Do not present simulated numbers as actual measurements. Label them:
+
+"Prototype AI Confidence"
+
+---
+
+# 18. DEMO DATA
+
+Create at least 5 demo properties.
+
+Property 1:
+Residential
+3 floors
+1 basement
+2400 sq.ft land
+4850 sq.ft built-up
+
+Property 2:
+Commercial
+5 floors
+parking
+5000 sq.ft land
+
+Property 3:
+Apartment
+8 floors
+multiple units
+basement parking
+
+Property 4:
+Empty Land
+3200 sq.ft
+no building
+
+Property 5:
+Industrial
+2 floors
+large property boundary
+
+Each must have:
+
+* Unique prototype 3D ULPIN
+* 3D model
+* Property metadata
+* Floor information
+* Boundary information
+
+---
+
+# 19. MAP VIEW
+
+Create a simplified GIS-style map.
+
+Show:
+
+Property parcels
+Buildings
+Roads
+Property boundaries
+
+Use a map grid if external map APIs are unavailable.
+
+Allow selecting a parcel.
+
+When selected:
+
+Zoom into property.
+
+Open 3D visualization.
+
+---
+
+# 20. ARCHITECTURE DIAGRAM PAGE
+
+Create a page or modal called:
+
+"System Architecture"
+
+Show an attractive architecture diagram:
+
+DATA SOURCES
+
+Drone Imagery
+LiDAR
+GNSS/CORS
+DEM/DSM
+Building Plans
+GIS Data
+
+↓
+
+DATA PROCESSING
+
+Image Processing
+Feature Extraction
+Coordinate Processing
+
+↓
+
+AI / ML ENGINE
+
+Building Detection
+Floor Detection
+Boundary Detection
+3D Reconstruction
+
+↓
+
+3D CADASTRAL ENGINE
+
+Land Parcel
+Building
+Floor
+Unit
+Basement
+Parking
+
+↓
+
+3D ULPIN ENGINE
+
+Unique Prototype Property Identifier
+
+↓
+
+VALIDATION ENGINE
+
+Boundary Validation
+Vertical Alignment
+Overlap Detection
+
+↓
+
+OUTPUT
+
+3D Visualization
+Property Explorer
+Property Report
+Infrastructure Planning
+
+Make this diagram visually impressive.
+
+---
+
+# 21. SECURITY FEATURES
+
+Include a small "Security & Data Integrity" section.
+
+Demonstrate:
+
+* User authentication UI
+* Role-based access concept
+* Data validation
+* Audit log
+* Secure API architecture
+* Input validation
+* File type validation
+* File size validation
+
+Roles:
+
+Administrator
+Surveyor
+Property Officer
+Viewer
+
+Create a small audit log:
+
+"Property updated"
+"3D ULPIN generated"
+"Boundary validation completed"
+"Report generated"
+
+Do not implement unnecessary complex cybersecurity features. The purpose is to demonstrate that property data should be protected and changes should be traceable.
+
+---
+
+# 22. REPORT ANALYTICS
+
+Create a small analytics section.
+
+Charts:
+
+Properties by Type
+Properties by Number of Floors
+Validated vs Pending
+Vertical vs Non-Vertical
+Boundary Issues
+
+Use Recharts.
+
+Keep charts secondary to the 3D visualization.
+
+---
+
+# 23. USER EXPERIENCE
+
+Make the complete workflow easy:
+
+1. Upload image
+2. AI analyzes image
+3. Generate 3D model
+4. Adjust property parameters
+5. Create vertical property structure
+6. Generate prototype 3D ULPIN
+7. Validate boundaries
+8. Explore property in 3D
+9. Generate report
+
+Add smooth transitions and loading states.
+
+Use toast notifications for actions.
+
+Examples:
+
+"3D model generated successfully"
+
+"Prototype 3D ULPIN generated"
+
+"Boundary validation completed"
+
+"Report generated successfully"
+
+---
+
+# 24. IMPORTANT 3D REQUIREMENTS
+
+The 3D model must be REAL interactive Three.js geometry.
+
+Do NOT use a static image as the 3D model.
+
+Implement:
+
+* Box geometry for buildings
+* Separate geometry for each floor
+* Separate basement geometry
+* Land parcel geometry
+* Boundary lines
+* Parking geometry
+* Apartment unit subdivisions
+
+Add realistic lighting and shadows.
+
+Use a professional architectural appearance.
+
+Allow the camera to orbit around the property.
+
+---
+
+# 25. ERROR HANDLING
+
+Handle:
+
+Invalid image format
+Large file
+Missing property information
+Invalid dimensions
+Invalid floor count
+Failed model generation
+Failed report generation
+
+Show user-friendly messages.
+
+Do not let the application crash.
+
+---
+
+# 26. CODE QUALITY
+
+Organize components properly.
+
+Suggested structure:
+
+src/
+components/
+Dashboard/
+ThreeDViewer/
+BuildingModel/
+FloorModel/
+LandParcel/
+BasementModel/
+BoundaryLayer/
+ULPINPanel/
+AIAnalysis/
+Report/
+Navigation/
+
+pages/
+Landing.tsx
+Dashboard.tsx
+ImageTo3D.tsx
+PropertyBuilder.tsx
+ULPIN.tsx
+VerticalMapping.tsx
+BoundaryValidation.tsx
+PropertyExplorer.tsx
+Reports.tsx
+
+data/
+demoProperties.ts
+
+utils/
+ulpinGenerator.ts
+propertyCalculations.ts
+validation.ts
+
+Keep components reusable.
+
+Use TypeScript interfaces for:
+
+Property
+Building
+Floor
+Unit
+Boundary
+ULPIN
+AIAnalysisResult
+Report
+
+---
+
+# 27. FINAL DEMO EXPERIENCE
+
+The final application should allow me to demonstrate this exact scenario:
+
+STEP 1:
+
+Open Dashboard.
+
+Show the 3D city/property map.
+
+STEP 2:
+
+Click "Image → 3D".
+
+Upload a building image.
+
+STEP 3:
+
+Show the AI processing animation.
+
+STEP 4:
+
+Show detected building information.
+
+STEP 5:
+
+Generate a 3D building.
+
+STEP 6:
+
+Open the Vertical Property Viewer.
+
+Show:
+
+Ground
+Floor 1
+Floor 2
+Floor 3
+Basement
+
+STEP 7:
+
+Activate "Exploded View".
+
+Show the floors separating vertically.
+
+STEP 8:
+
+Click Floor 2.
+
+Display its property information and prototype 3D ULPIN.
+
+STEP 9:
+
+Open Boundary Validation.
+
+Show validation results.
+
+STEP 10:
+
+Open Reports.
+
+Generate the professional property report.
+
+This entire workflow should be possible during a live hackathon demonstration.
+
+---
+
+# 28. FINAL QUALITY REQUIREMENT
+
+Do not build only a static frontend mockup.
+
+Build a working interactive prototype.
+
+Prioritize these features if development time is limited:
+
+1. Interactive 3D property viewer
+2. Image upload
+3. Prototype AI analysis
+4. Dynamic property builder
+5. Vertical floor mapping
+6. Prototype 3D ULPIN generation
+7. Boundary validation
+8. Property report generation
+
+The 3D visualization and vertical mapping are the most important features.
+
+Make the final application polished, visually impressive, intuitive, and suitable for a hackathon jury demonstration.
+
+Before finishing, test every major button and navigation route.
+
+There must be no broken links, blank pages, console errors, or non-functional primary interactions.
+
